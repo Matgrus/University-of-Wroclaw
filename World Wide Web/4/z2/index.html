@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>zad2</title>
+        <script src="script.js"></script>
+        
+    </head>
+    <body>
+        <form method="post" name="formularz" action="" onsubmit="return check_form()">
+            <table>
+                <tr>
+                    <td>NUMER KONTA BANKOWEGO:</td>
+                    <td><input type="text" name="nr_konta" id="nr_konta" placeholder="26 cyfr bez odstępów" onblur="return check_nrkonta()"></td>
+                    <td id="konto_check"></td>
+                </tr>
+                <tr>
+                    <td>PESEL:</td>
+                    <td><input type="text" name="pesel" id="pesel" placeholder="11 cyfr" onblur="return check_pesel()"></td>
+                    <td id="pesel_check"></td>
+                </tr>
+                <tr>
+                    <td>DATA URODZENIA:</td>
+                    <td><input type="text" name="data_ur" id="data_ur" placeholder="DD.MM.RRRR" onblur="return check_dataur()"></td>
+                    <td id="data_check"></td>
+                </tr>
+                <tr>
+                    <td>ADRES E-MAIL:</td>
+                    <td><input type="text" name="mail" id="mail" placeholder="asd@example.com" onblur="return check_mail()"></td> 
+                    <td id="mail_check"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><input type="submit" value="WYŚLIJ" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

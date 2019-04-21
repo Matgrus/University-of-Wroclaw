@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>zad7</title>
+        <style>
+            
+            #content1 {
+                display: flex;
+                justify-content: space-around;
+                flex-flow: row wrap;
+                align-items: stretch;
+            }
+
+            .flex1 {
+                flex-grow: 1;
+                border: 3px solid rgba(0,0,0,.2);
+            }
+
+            .flex2 {
+                flex-grow: 2;
+                border: 3px solid rgba(0,0,0,.2);
+            }
+            
+            #content2 {
+                display: flex;
+                width: 500px;
+            }
+
+            #content2 div {
+                flex-basis: 120px;
+                border: 3px solid rgba(0,0,0,.2);
+            }
+
+            .shrink1 { 
+                flex-shrink: 1;
+            }
+
+            .shrink2 { 
+                flex-shrink: 2; 
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+
+        <!-- flex-grow -->
+        
+        <h4>This is a Flex-Grow</h4>
+        <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+        <div id="content1">
+            <div class="flex1" style="background-color:red;">A</div>
+            <div class="flex1" style="background-color:lightblue;">B</div>
+            <div class="flex1" style="background-color:yellow;">C</div>
+            <div class="flex2" style="background-color:brown;">D</div>
+            <div class="flex2" style="background-color:lightgreen;">E</div>
+            <div class="flex1" style="background-color:brown;">F</div>
+        </div>
+        
+        <hr>
+        <!-- flex-shrink-->
+        
+        <p>The width of content is 500px; the flex-basis of the flex items is 120px.</p>
+        <p>A, B, C have flex-shrink:1 set. D and E have flex-shrink:2 set</p>
+        <p>The width of D and E is less than the others.</p>
+        <div id="content2">
+            <div class="shrink1" style="background-color:red;">A</div>
+            <div class="shrink1" style="background-color:lightblue;">B</div>
+            <div class="shrink1" style="background-color:yellow;">C</div>
+            <div class="shrink2" style="background-color:brown;">D</div>
+            <div class="shrink2" style="background-color:lightgreen;">E</div>
+        </div>
+        
+    </body>
+</html>

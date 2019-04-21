@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>zad3</title>
+        <meta charset=utf-8>
+        <style>
+            /*type*/
+            p {
+                background-color: red;
+            }
+            
+            /*descendant*/
+            li {
+                list-style-type: disc;
+            }
+            li li {
+                list-style-type: circle;
+            }
+            
+            /*child*/
+            span {
+                background-color: white;
+            }
+            div > span {
+                background-color: DodgerBlue;
+            }
+            
+            /*adjacent*/
+            li:first-of-type + li {
+                color: red;
+            }
+            
+            /*id*/
+            #id_test {                
+                color: pink;
+            }
+            
+            /*class*/
+            .class_test {
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- type -->
+        <p>type_test</p>
+        
+        <!-- descendant and adjacent -->
+        <ul>
+            <li>
+                <div>Item 1</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+            <li>
+                <div>Item 2</div>
+                <ul>
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <!-- child -->
+        <div>
+            <span>Span #1, in the div.
+                <span>Span #2, in the span that's in the div.</span>
+            </span>
+        </div>
+        <span>Span #3, not in the div at all.</span>
+        
+        <!-- id and class -->
+        
+        <h3 class=class_test>one</h3>
+        <h3 class=class_test id=id_test>two</h3>
+        <h3 class=class_test>three</h3>
+    
+    </body>
+</html>

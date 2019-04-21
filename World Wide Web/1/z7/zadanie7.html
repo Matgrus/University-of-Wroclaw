@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>zad1</title>
+        <meta charset="utf-8">
+        <style>
+            div{
+                margin: 5px;
+            }
+            
+            label{
+                width:120px;
+                display:inline-block
+            }
+        </style>
+    </head>
+    <body>
+        
+        <form id="przelew">
+        <div>
+            <label for="nr_konta">Numer konta:</label>
+            <input type="text" id="nr_konta" name="nr_konta" required>
+        </div>
+        <div>
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+        </div>
+        <div>
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+        </div>
+        <div>
+            <label for="email">Adres email:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required> 
+        </div>
+        <div>
+            <label for="kod_pocztowy">Kod pocztowy:</label>
+            <input type="text" id="kod_pocztowy" name="kod_pocztowy" placeholder="00-000" required>
+        </div>
+        <div>
+            <label for="miasto">Miasto:</label>
+            <input type="text" id="miasto" name="miasto" required>
+        </div>
+        <div>
+            <label for="kwota_przelewu">Kwota przelewu:</label>
+            <input type="text" id="kwota_przelewu" name="kwota_przelewu" placeholder="zł" required>
+        </div>
+        <div>
+            <label for="data_przelewu">Data przelewu:</label>
+            <input type="date" id="data_przelewu" name="data_przelewu" required>
+        </div>
+        
+        <input type="submit">
+        
+    </form>
+        
+    </body>
+</html>
