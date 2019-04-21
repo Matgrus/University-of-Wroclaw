@@ -1,0 +1,10 @@
+#lang racket
+
+;cw1
+
+(define (arith-expr? t)
+  (or (const? t)
+      (and (binop? t)
+           (arith-expr? (binop-left  t))
+           (arith-expr? (binop-right t)))))
+

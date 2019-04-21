@@ -1,0 +1,6 @@
+#lang racket
+
+;cw1
+
+(define (make-rat n d)
+  (list n d))
