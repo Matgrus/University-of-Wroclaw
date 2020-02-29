@@ -27,3 +27,19 @@ Summer 2018/19:
 - Mathematical analysis II
 - Object-Oriented Programming
 - Probability and Statistics
+
+Winter 2019/20:
+- Scala in Practice
+- Advanced Python Programming
+- Course: Game Development in Unity3D
+- Course: Rust language
+- Java course
+- Seminar: Information Safety and Security
+- What you need to know for your first job
+
+Summer 2019/20:
+- Computer Networks
+- Computer Systems
+- Team project: Engine Unity3D and Virtual Reality
+- Databases
+- Digital Logic
