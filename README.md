@@ -40,6 +40,5 @@ Winter 2019/20:
 Summer 2019/20:
 - Computer Networks
 - Computer Systems
-- Team project: Engine Unity3D and Virtual Reality
 - Databases
 - Digital Logic
