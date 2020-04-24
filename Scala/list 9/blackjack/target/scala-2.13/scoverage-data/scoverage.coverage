@@ -1,0 +1,1106 @@
+# Coverage data, format version: 2.0
+# Statement data:
+# - id
+# - source path
+# - package name
+# - class name
+# - class type (Class, Object or Trait)
+# - full class name
+# - method name
+# - start offset
+# - end offset
+# - line number
+# - symbol name
+# - tree name
+# - is branch
+# - invocations count
+# - is ignored
+# - description (can be multi-line)
+# '' sign
+# ------------------------------------------
+1
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+get_cards
+115
+131
+7
+deck.Deck.get_cards
+Apply
+false
+0
+false
+Blackjack.this.deck.get_cards()
+
+2
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+185
+188
+11
+<nosymbol>
+Literal
+false
+0
+false
+"2"
+
+3
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+190
+193
+11
+<nosymbol>
+Literal
+false
+0
+false
+"3"
+
+4
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+195
+198
+11
+<nosymbol>
+Literal
+false
+0
+false
+"4"
+
+5
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+200
+203
+11
+<nosymbol>
+Literal
+false
+0
+false
+"5"
+
+6
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+205
+208
+11
+<nosymbol>
+Literal
+false
+0
+false
+"6"
+
+7
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+210
+213
+11
+<nosymbol>
+Literal
+false
+0
+false
+"7"
+
+8
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+215
+218
+11
+<nosymbol>
+Literal
+false
+0
+false
+"8"
+
+9
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+220
+223
+11
+<nosymbol>
+Literal
+false
+0
+false
+"9"
+
+10
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+225
+229
+11
+<nosymbol>
+Literal
+false
+0
+false
+"10"
+
+11
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+252
+265
+12
+cards.Card.get_value
+Apply
+false
+0
+false
+x.get_value()
+
+12
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+180
+276
+11
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10").contains[String](x.get_value())
+
+13
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+287
+300
+14
+cards.Card.get_value
+Apply
+false
+0
+false
+x.get_value()
+
+14
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+287
+306
+14
+scala.collection.StringOps.toInt
+Select
+false
+0
+false
+scala.Predef.augmentString(x.get_value()).toInt
+
+15
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+287
+306
+14
+scala.collection.StringOps.toInt
+Block
+true
+0
+false
+scala.Predef.augmentString(x.get_value()).toInt
+
+16
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+328
+334
+15
+<nosymbol>
+Literal
+false
+0
+false
+"Jack"
+
+17
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+336
+343
+15
+<nosymbol>
+Literal
+false
+0
+false
+"Queen"
+
+18
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+345
+351
+15
+<nosymbol>
+Literal
+false
+0
+false
+"King"
+
+19
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+362
+375
+15
+cards.Card.get_value
+Apply
+false
+0
+false
+x.get_value()
+
+20
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+323
+376
+15
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Jack", "Queen", "King").contains[String](x.get_value())
+
+21
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+387
+389
+16
+<nosymbol>
+Literal
+false
+0
+false
+10
+
+22
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+387
+389
+16
+<nosymbol>
+Block
+true
+0
+false
+10
+
+23
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+411
+413
+18
+<nosymbol>
+Literal
+false
+0
+false
+11
+
+24
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+411
+413
+18
+<nosymbol>
+Block
+true
+0
+false
+11
+
+25
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+points
+319
+420
+15
+<nosymbol>
+If
+true
+0
+false
+if (scala.collection.immutable.List.apply[String]("Jack", "Queen", "King").contains[String](x.get_value()))
+  10
+else
+  11
+
+26
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+476
+499
+23
+scala.collection.immutable.List.length
+Select
+false
+0
+false
+Blackjack.this.deck.get_cards().length
+
+27
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+471
+499
+23
+scala.Int.<=
+Apply
+false
+0
+false
+n.<=(Blackjack.this.deck.get_cards().length)
+
+28
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+501
+531
+23
+<nosymbol>
+Literal
+false
+0
+false
+"Too little cards in the deck"
+
+29
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+463
+532
+23
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(n.<=(Blackjack.this.deck.get_cards().length), "Too little cards in the deck")
+
+30
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+548
+549
+24
+<nosymbol>
+Literal
+false
+0
+false
+0
+
+31
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+565
+566
+25
+<nosymbol>
+Literal
+false
+0
+false
+0
+
+32
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+596
+615
+26
+scala.collection.LinearSeqOps.apply
+Apply
+false
+0
+false
+Blackjack.this.deck.get_cards().apply(0)
+
+33
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+627
+652
+27
+java.lang.Object.==
+Apply
+false
+0
+false
+card.get_value().==("Ace")
+
+34
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+665
+674
+28
+scala.Int.+
+Apply
+false
+0
+false
+sum.+(11)
+
+35
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+739
+761
+30
+java.lang.String.+
+Apply
+false
+0
+false
+card.toString().+(": 11")
+
+36
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+731
+762
+30
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println(card.toString().+(": 11"))
+
+37
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+654
+771
+27
+<nosymbol>
+Block
+true
+0
+false
+{
+  sum = sum.+(11);
+  scala.Predef.println(card.toString().+(": 11"))
+}
+
+38
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+795
+812
+32
+Blackjack.points
+Apply
+false
+0
+false
+this.points(card)
+
+39
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+788
+812
+32
+scala.Int.+
+Apply
+false
+0
+false
+sum.+(this.points(card))
+
+40
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+910
+914
+34
+<nosymbol>
+Literal
+false
+0
+false
+": "
+
+41
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+917
+934
+34
+Blackjack.points
+Apply
+false
+0
+false
+this.points(card)
+
+42
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+894
+934
+34
+java.lang.String.+
+Apply
+false
+0
+false
+card.toString().+(": ").+(this.points(card))
+
+43
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+886
+935
+34
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println(card.toString().+(": ").+(this.points(card)))
+
+44
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+777
+944
+31
+<nosymbol>
+Block
+true
+0
+false
+{
+  sum = sum.+(this.points(card));
+  scala.Predef.println(card.toString().+(": ").+(this.points(card)))
+}
+
+45
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+959
+970
+36
+deck.Deck.pull
+Apply
+false
+0
+false
+Blackjack.this.deck.pull()
+
+46
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+952
+970
+36
+Blackjack.deck_=
+Apply
+false
+0
+false
+Blackjack.this.deck_=(Blackjack.this.deck.pull())
+
+47
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+555
+977
+25
+scala.collection.immutable.Range.foreach
+Apply
+false
+0
+false
+scala.Predef.intWrapper(0).until(n).foreach[Unit](((x$1: Int) => (x$1: Int @unchecked) match {
+  case _ => {
+    val card: cards.Card = Blackjack.this.deck.get_cards().apply(0);
+    if (card.get_value().==("Ace"))
+      {
+        sum = sum.+(11);
+        scala.Predef.println(card.toString().+(": 11"))
+      }
+    else
+      {
+        sum = sum.+(this.points(card));
+        scala.Predef.println(card.toString().+(": ").+(this.points(card)))
+      };
+    Blackjack.this.deck_=(Blackjack.this.deck.pull())
+  }
+}))
+
+48
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+991
+1014
+38
+java.lang.String.+
+Apply
+false
+0
+false
+"Sum of points: ".+(sum)
+
+49
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+play
+983
+1015
+38
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("Sum of points: ".+(sum))
+
+50
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1357
+1371
+54
+scala.collection.IterableOnceOps.nonEmpty
+Select
+false
+0
+false
+Blackjack.this.all21.nonEmpty
+
+51
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1390
+1398
+55
+scala.collection.LinearSeqOps.apply
+Apply
+false
+0
+false
+Blackjack.this.all21.apply(0)
+
+52
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1382
+1399
+55
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println(Blackjack.this.all21.apply(0))
+
+53
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1382
+1399
+55
+scala.Predef.println
+Block
+true
+0
+false
+scala.Predef.println(Blackjack.this.all21.apply(0))
+
+54
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1421
+1462
+57
+scala.Predef.println
+Apply
+false
+0
+false
+scala.Predef.println("no subsequences with 21 points")
+
+55
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Class
+Blackjack
+first21
+1421
+1462
+57
+scala.Predef.println
+Block
+true
+0
+false
+scala.Predef.println("no subsequences with 21 points")
+
+56
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1560
+1566
+64
+deck.Deck.apply
+Apply
+false
+0
+false
+deck.Deck.apply()
+
+57
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1582
+1583
+65
+<nosymbol>
+Literal
+false
+0
+false
+0
+
+58
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1587
+1601
+65
+scala.Int.-
+Apply
+false
+0
+false
+numOfDecks.-(2)
+
+59
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1643
+1665
+66
+scala.collection.immutable.List.:::
+Apply
+false
+0
+false
+deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+
+60
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1618
+1666
+66
+deck.Deck.<init>
+Apply
+false
+0
+false
+new deck.Deck({
+  final <synthetic> <artifact> val rassoc$1: List[cards.Card] = res.get_cards();
+  deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+})
+
+61
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1572
+1666
+65
+scala.collection.immutable.Range.foreach
+Apply
+false
+0
+false
+scala.Predef.intWrapper(0).to(numOfDecks.-(2)).foreach[Unit](((x$2: Int) => (x$2: Int @unchecked) match {
+  case _ => res = new deck.Deck({
+    final <synthetic> <artifact> val rassoc$1: List[cards.Card] = res.get_cards();
+    deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+  })
+}))
+
+62
+M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala
+<empty>
+Blackjack
+Object
+Blackjack
+apply
+1679
+1697
+68
+Blackjack.<init>
+Apply
+false
+0
+false
+new Blackjack(res)
+

@@ -1,0 +1,7 @@
+[debug] Acquiring lock on file M:\UWR\V\Scala\list 9\project\target\.sbt-compilation-infos\blackjack-compile\.sbt-idea-lock ...
+[info] Cleaning datadir [M:\UWR\V\Scala\list 9\blackjack\target\scala-2.13/scoverage-data]
+[info] Beginning coverage instrumentation
+[info] Instrumentation completed [62 statements]
+[info] Wrote instrumentation file [M:\UWR\V\Scala\list 9\blackjack\target\scala-2.13\scoverage-data\scoverage.coverage]
+[info] Will write measurement data to [M:\UWR\V\Scala\list 9\blackjack\target\scala-2.13/scoverage-data]
+[debug] Releasing lock on file M:\UWR\V\Scala\list 9\project\target\.sbt-compilation-infos\blackjack-compile\.sbt-idea-lock.

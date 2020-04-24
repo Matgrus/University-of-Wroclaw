@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="blackjack">
+      <option name="postfixOps" value="true" />
+      <option name="implicitConversions" value="true" />
+      <option name="higherKinds" value="true" />
+      <option name="existentials" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="explainTypeErrors" value="true" />
+      <parameters>
+        <parameter value="-encoding" />
+        <parameter value="utf8" />
+        <parameter value="-Xfatal-warnings" />
+        <parameter value="-Xlint:inaccessible" />
+        <parameter value="-Xlint:private-shadow" />
+        <parameter value="-Xlint:type-parameter-shadow" />
+        <parameter value="-Xlint:unsound-match" />
+        <parameter value="-Ywarn-dead-code" />
+        <parameter value="-Ywarn-inaccessible" />
+        <parameter value="-Ywarn-nullary-override" />
+        <parameter value="-Ywarn-unused:locals" />
+        <parameter value="-Ywarn-unused:params" />
+      </parameters>
+    </profile>
+  </component>
+</project>

@@ -1,0 +1,225 @@
+<scoverage 
+statement-count="62" statements-invoked="53" statement-rate="85.48" branch-rate="75.00" version="1.0" timestamp="1579081102043">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="62" statements-invoked="53" statement-rate="85.48">
+            <classes>
+                <class 
+                name="Blackjack" filename="Blackjack.scala" statement-count="62" statements-invoked="53" statement-rate="85.48" branch-rate="75.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Blackjack/first21" statement-count="6" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1357" end="1371" line="54" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1382" end="1399" line="55" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1421" end="1462" line="57" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1382" end="1399" line="55" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1421" end="1462" line="57" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="first21" start="1390" end="1398" line="55" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Blackjack/play" statement-count="24" statements-invoked="23" statement-rate="95.83" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="596" end="615" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="917" end="934" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="739" end="761" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="777" end="944" line="31" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="476" end="499" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="463" end="532" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="795" end="812" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="555" end="977" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="952" end="970" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="910" end="914" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="983" end="1015" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="565" end="566" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="886" end="935" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="665" end="674" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="654" end="771" line="27" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="501" end="531" line="23" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="959" end="970" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="471" end="499" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="731" end="762" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="991" end="1014" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="548" end="549" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="788" end="812" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="894" end="934" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="play" start="627" end="652" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Blackjack/get_cards" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="get_cards" start="115" end="131" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Blackjack/points" statement-count="24" statements-invoked="24" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="411" end="413" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="336" end="343" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="215" end="218" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="252" end="265" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="323" end="376" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="185" end="188" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="200" end="203" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="287" end="306" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="195" end="198" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="287" end="300" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="387" end="389" line="16" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="328" end="334" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="210" end="213" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="319" end="420" line="15" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="225" end="229" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="362" end="375" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="345" end="351" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="220" end="223" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="387" end="389" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="190" end="193" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="180" end="276" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="287" end="306" line="14" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="411" end="413" line="18" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Class" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="points" start="205" end="208" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="&lt;empty&gt;/Blackjack/apply" statement-count="7" statements-invoked="5" statement-rate="71.43" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1643" end="1665" line="66" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1679" end="1697" line="68" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1560" end="1566" line="64" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1587" end="1601" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1572" end="1666" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1618" end="1666" line="66" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="&lt;empty&gt;" class="Blackjack" class-type="Object" full-class-name="Blackjack" source="M:\UWR\V\Scala\list 9\blackjack\src\main\scala\Blackjack.scala" method="apply" start="1582" end="1583" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

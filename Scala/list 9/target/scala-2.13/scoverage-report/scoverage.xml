@@ -1,0 +1,22 @@
+<scoverage 
+statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00" version="1.0" timestamp="1579081102038">
+    <packages>
+        <package name="&lt;empty&gt;" statement-count="1" statements-invoked="0" statement-rate="0.00">
+            <classes>
+                <class 
+                name="Main" filename="Main.scala" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="&lt;empty&gt;/Main/main" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="&lt;empty&gt;" class="Main" class-type="Object" full-class-name="Main" source="M:\UWR\V\Scala\list 9\src\main\scala\Main.scala" method="main" start="210" end="249" line="7" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

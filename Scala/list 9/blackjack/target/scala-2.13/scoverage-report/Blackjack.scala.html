@@ -1,0 +1,1446 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Blackjack.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>import cards.Card
+</span>2 <span style=''>import deck.Deck
+</span>3 <span style=''>
+</span>4 <span style=''>class Blackjack(var deck: Deck) {
+</span>5 <span style=''>
+</span>6 <span style=''>  def get_cards(): List[Card] = {
+</span>7 <span style=''>    </span><span style='background: #AEF1AE'>deck.get_cards()</span><span style=''>
+</span>8 <span style=''>  }
+</span>9 <span style=''>
+</span>10 <span style=''>  def points(x: Card): Int = {
+</span>11 <span style=''>    if (</span><span style='background: #AEF1AE'>List(&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains(
+</span>12 <span style=''></span><span style='background: #AEF1AE'>          x.get_value()
+</span>13 <span style=''></span><span style='background: #AEF1AE'>        )</span><span style=''>) {
+</span>14 <span style=''>      </span><span style='background: #AEF1AE'>x.get_value().toInt</span><span style=''>
+</span>15 <span style=''>    } else </span><span style='background: #AEF1AE'>if (List(&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains(x.get_value())) {
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      10
+</span>17 <span style=''></span><span style='background: #AEF1AE'>    } else {
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      11
+</span>19 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>20 <span style=''>  }
+</span>21 <span style=''>
+</span>22 <span style=''>  def play(n: Int): Unit = {
+</span>23 <span style=''>    </span><span style='background: #AEF1AE'>require(n &lt;= deck.get_cards().length, </span><span style='background: #F0ADAD'>&quot;Too little cards in the deck&quot;</span><span style='background: #AEF1AE'>)</span><span style=''>
+</span>24 <span style=''>    var sum = </span><span style='background: #AEF1AE'>0</span><span style=''>
+</span>25 <span style=''>    </span><span style='background: #AEF1AE'>for (_ &lt;- 0 until n) {
+</span>26 <span style=''></span><span style='background: #AEF1AE'>      val card = deck.get_cards()(0)
+</span>27 <span style=''></span><span style='background: #AEF1AE'>      if (card.get_value() == &quot;Ace&quot;) {
+</span>28 <span style=''></span><span style='background: #AEF1AE'>        sum += 11
+</span>29 <span style=''></span><span style='background: #AEF1AE'>        //println(card + &quot;: 11&quot;)  // scalafix
+</span>30 <span style=''></span><span style='background: #AEF1AE'>        println(card.toString + &quot;: 11&quot;)
+</span>31 <span style=''></span><span style='background: #AEF1AE'>      } else {
+</span>32 <span style=''></span><span style='background: #AEF1AE'>        sum += this.points(card)
+</span>33 <span style=''></span><span style='background: #AEF1AE'>        //println(card + &quot;: &quot; + this.points(card)) // scalafix
+</span>34 <span style=''></span><span style='background: #AEF1AE'>        println(card.toString + &quot;: &quot; + this.points(card))
+</span>35 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      deck = deck.pull()
+</span>37 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>38 <span style=''>    </span><span style='background: #AEF1AE'>println(&quot;Sum of points: &quot; + sum)</span><span style=''>
+</span>39 <span style=''>  }
+</span>40 <span style=''>
+</span>41 <span style=''>  lazy val all21: List[List[Card]] = {
+</span>42 <span style=''>
+</span>43 <span style=''>    def points_sum(ls: List[Card]): Int = {
+</span>44 <span style=''>      ls.map(x =&gt; this.points(x)).sum
+</span>45 <span style=''>    }
+</span>46 <span style=''>
+</span>47 <span style=''>    (0 to deck.get_cards().length).iterator
+</span>48 <span style=''>      .flatMap(i =&gt; deck.get_cards().combinations(i))
+</span>49 <span style=''>      .filter(x =&gt; points_sum(x) == 21)
+</span>50 <span style=''>      .toList
+</span>51 <span style=''>  }
+</span>52 <span style=''>
+</span>53 <span style=''>  def first21(): Unit = {
+</span>54 <span style=''>    if (</span><span style='background: #F0ADAD'>all21.nonEmpty</span><span style=''>) {
+</span>55 <span style=''>      </span><span style='background: #F0ADAD'>println(all21(0))</span><span style=''>
+</span>56 <span style=''>    } else {
+</span>57 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;no subsequences with 21 points&quot;)</span><span style=''>
+</span>58 <span style=''>    }
+</span>59 <span style=''>  }
+</span>60 <span style=''>
+</span>61 <span style=''>}
+</span>62 <span style=''>object Blackjack {
+</span>63 <span style=''>  def apply(numOfDecks: Int): Blackjack = {
+</span>64 <span style=''>    var res = </span><span style='background: #AEF1AE'>Deck()</span><span style=''>
+</span>65 <span style=''>    </span><span style='background: #AEF1AE'>for (_ &lt;- 0 to numOfDecks - 2) {
+</span>66 <span style=''></span><span style='background: #AEF1AE'>      res = </span><span style='background: #F0ADAD'>new Deck(res.get_cards() ::: Deck().get_cards())</span><span style=''>
+</span>67 <span style=''>    }
+</span>68 <span style=''>    </span><span style='background: #AEF1AE'>new Blackjack(res)</span><span style=''>
+</span>69 <span style=''>  }
+</span>70 <span style=''>
+</span>71 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          115
+          -
+          131
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.get_cards
+        </td>
+        <td style="background: #AEF1AE">
+          Blackjack.this.deck.get_cards()
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          215
+          -
+          218
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;8&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          185
+          -
+          188
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;2&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          200
+          -
+          203
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;5&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          195
+          -
+          198
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;4&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          210
+          -
+          213
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;7&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          225
+          -
+          229
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;10&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          220
+          -
+          223
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;9&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          190
+          -
+          193
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;3&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          180
+          -
+          276
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains[String](x.get_value())
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          205
+          -
+          208
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;6&quot;
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          252
+          -
+          265
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          x.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          287
+          -
+          306
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.StringOps.toInt
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(x.get_value()).toInt
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          287
+          -
+          300
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          x.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          287
+          -
+          306
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.collection.StringOps.toInt
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(x.get_value()).toInt
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          336
+          -
+          343
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Queen&quot;
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          323
+          -
+          376
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains[String](x.get_value())
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          328
+          -
+          334
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Jack&quot;
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          319
+          -
+          420
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          if (scala.collection.immutable.List.apply[String](&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains[String](x.get_value()))
+  10
+else
+  11
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          362
+          -
+          375
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          x.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          345
+          -
+          351
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;King&quot;
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          387
+          -
+          389
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          10
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          387
+          -
+          389
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          10
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          411
+          -
+          413
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          11
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          411
+          -
+          413
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          11
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          476
+          -
+          499
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.List.length
+        </td>
+        <td style="background: #AEF1AE">
+          Blackjack.this.deck.get_cards().length
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          463
+          -
+          532
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(n.&lt;=(Blackjack.this.deck.get_cards().length), &quot;Too little cards in the deck&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          501
+          -
+          531
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;Too little cards in the deck&quot;
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          471
+          -
+          499
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.&lt;=
+        </td>
+        <td style="background: #AEF1AE">
+          n.&lt;=(Blackjack.this.deck.get_cards().length)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          548
+          -
+          549
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          555
+          -
+          977
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(0).until(n).foreach[Unit](((x$1: Int) =&gt; (x$1: Int @unchecked) match {
+  case _ =&gt; {
+    val card: cards.Card = Blackjack.this.deck.get_cards().apply(0);
+    if (card.get_value().==(&quot;Ace&quot;))
+      {
+        sum = sum.+(11);
+        scala.Predef.println(card.toString().+(&quot;: 11&quot;))
+      }
+    else
+      {
+        sum = sum.+(this.points(card));
+        scala.Predef.println(card.toString().+(&quot;: &quot;).+(this.points(card)))
+      };
+    Blackjack.this.deck_=(Blackjack.this.deck.pull())
+  }
+}))
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          565
+          -
+          566
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          596
+          -
+          615
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Blackjack.this.deck.get_cards().apply(0)
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          654
+          -
+          771
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  sum = sum.+(11);
+  scala.Predef.println(card.toString().+(&quot;: 11&quot;))
+}
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          627
+          -
+          652
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          card.get_value().==(&quot;Ace&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          665
+          -
+          674
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          sum.+(11)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          739
+          -
+          761
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          card.toString().+(&quot;: 11&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          731
+          -
+          762
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(card.toString().+(&quot;: 11&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          777
+          -
+          944
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  sum = sum.+(this.points(card));
+  scala.Predef.println(card.toString().+(&quot;: &quot;).+(this.points(card)))
+}
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          795
+          -
+          812
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Blackjack.points
+        </td>
+        <td style="background: #AEF1AE">
+          this.points(card)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          788
+          -
+          812
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td style="background: #AEF1AE">
+          sum.+(this.points(card))
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          917
+          -
+          934
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Blackjack.points
+        </td>
+        <td style="background: #AEF1AE">
+          this.points(card)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          910
+          -
+          914
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;: &quot;
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          886
+          -
+          935
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(card.toString().+(&quot;: &quot;).+(this.points(card)))
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          894
+          -
+          934
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          card.toString().+(&quot;: &quot;).+(this.points(card))
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          952
+          -
+          970
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Blackjack.deck_=
+        </td>
+        <td style="background: #AEF1AE">
+          Blackjack.this.deck_=(Blackjack.this.deck.pull())
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          959
+          -
+          970
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.pull
+        </td>
+        <td style="background: #AEF1AE">
+          Blackjack.this.deck.pull()
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          983
+          -
+          1015
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Sum of points: &quot;.+(sum))
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          991
+          -
+          1014
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Sum of points: &quot;.+(sum)
+        </td>
+      </tr><tr>
+        <td>
+          54
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          1357
+          -
+          1371
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.nonEmpty
+        </td>
+        <td style="background: #F0ADAD">
+          Blackjack.this.all21.nonEmpty
+        </td>
+      </tr><tr>
+        <td>
+          55
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          1382
+          -
+          1399
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Blackjack.this.all21.apply(0))
+        </td>
+      </tr><tr>
+        <td>
+          55
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          1382
+          -
+          1399
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(Blackjack.this.all21.apply(0))
+        </td>
+      </tr><tr>
+        <td>
+          55
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          1390
+          -
+          1398
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOps.apply
+        </td>
+        <td style="background: #F0ADAD">
+          Blackjack.this.all21.apply(0)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          1421
+          -
+          1462
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;no subsequences with 21 points&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          1421
+          -
+          1462
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;no subsequences with 21 points&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          64
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          1560
+          -
+          1566
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.apply
+        </td>
+        <td style="background: #AEF1AE">
+          deck.Deck.apply()
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          1587
+          -
+          1601
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.-
+        </td>
+        <td style="background: #AEF1AE">
+          numOfDecks.-(2)
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          1572
+          -
+          1666
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(0).to(numOfDecks.-(2)).foreach[Unit](((x$2: Int) =&gt; (x$2: Int @unchecked) match {
+  case _ =&gt; res = new deck.Deck({
+    final &lt;synthetic&gt; &lt;artifact&gt; val rassoc$1: List[cards.Card] = res.get_cards();
+    deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+  })
+}))
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          1582
+          -
+          1583
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          1643
+          -
+          1665
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.:::
+        </td>
+        <td style="background: #F0ADAD">
+          deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          1618
+          -
+          1666
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          new deck.Deck({
+  final &lt;synthetic&gt; &lt;artifact&gt; val rassoc$1: List[cards.Card] = res.get_cards();
+  deck.Deck.apply().get_cards().:::[cards.Card](rassoc$1)
+})
+        </td>
+      </tr><tr>
+        <td>
+          68
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          1679
+          -
+          1697
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          Blackjack.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Blackjack(res)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

@@ -1,0 +1,1969 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          deck\Deck.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package deck
+</span>2 <span style=''>
+</span>3 <span style=''>import cards._
+</span>4 <span style=''>import scala.util.Random
+</span>5 <span style=''>
+</span>6 <span style=''>class Deck(cards: List[Card]) {
+</span>7 <span style=''>
+</span>8 <span style=''>  def get_cards(): List[Card] = {
+</span>9 <span style=''>    </span><span style='background: #AEF1AE'>cards</span><span style=''>
+</span>10 <span style=''>  }
+</span>11 <span style=''>
+</span>12 <span style=''>  def pull(): Deck = {
+</span>13 <span style=''>    </span><span style='background: #AEF1AE'>require(this.get_cards().nonEmpty, </span><span style='background: #F0ADAD'>&quot;deck should have at least 1 element&quot;</span><span style='background: #AEF1AE'>)</span><span style=''>
+</span>14 <span style=''>    if (</span><span style='background: #AEF1AE'>this.get_cards().length == 1</span><span style=''>) {
+</span>15 <span style=''>      </span><span style='background: #AEF1AE'>new Deck(List())</span><span style=''>
+</span>16 <span style=''>    } else {
+</span>17 <span style=''>      </span><span style='background: #AEF1AE'>new Deck(cards.tail)</span><span style=''>
+</span>18 <span style=''>    }
+</span>19 <span style=''>  }
+</span>20 <span style=''>
+</span>21 <span style=''>  def push(c: Card): Deck = {
+</span>22 <span style=''>    </span><span style='background: #AEF1AE'>new Deck(c :: cards)</span><span style=''>
+</span>23 <span style=''>  }
+</span>24 <span style=''>
+</span>25 <span style=''>  def push(color: String, value: String): Deck = {
+</span>26 <span style=''>    </span><span style='background: #AEF1AE'>require(
+</span>27 <span style=''></span><span style='background: #AEF1AE'>      List(
+</span>28 <span style=''></span><span style='background: #AEF1AE'>        &quot;2&quot;,
+</span>29 <span style=''></span><span style='background: #AEF1AE'>        &quot;3&quot;,
+</span>30 <span style=''></span><span style='background: #AEF1AE'>        &quot;4&quot;,
+</span>31 <span style=''></span><span style='background: #AEF1AE'>        &quot;5&quot;,
+</span>32 <span style=''></span><span style='background: #AEF1AE'>        &quot;6&quot;,
+</span>33 <span style=''></span><span style='background: #AEF1AE'>        &quot;7&quot;,
+</span>34 <span style=''></span><span style='background: #AEF1AE'>        &quot;8&quot;,
+</span>35 <span style=''></span><span style='background: #AEF1AE'>        &quot;9&quot;,
+</span>36 <span style=''></span><span style='background: #AEF1AE'>        &quot;10&quot;,
+</span>37 <span style=''></span><span style='background: #AEF1AE'>        &quot;King&quot;,
+</span>38 <span style=''></span><span style='background: #AEF1AE'>        &quot;Queen&quot;,
+</span>39 <span style=''></span><span style='background: #AEF1AE'>        &quot;Ace&quot;,
+</span>40 <span style=''></span><span style='background: #AEF1AE'>        &quot;Jack&quot;
+</span>41 <span style=''></span><span style='background: #AEF1AE'>      ).contains(value) &amp;&amp;
+</span>42 <span style=''></span><span style='background: #AEF1AE'>        List(&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains(color),
+</span>43 <span style=''></span><span style='background: #AEF1AE'>      </span><span style='background: #F0ADAD'>&quot;card error&quot;</span><span style='background: #AEF1AE'>
+</span>44 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>45 <span style=''>    </span><span style='background: #AEF1AE'>new Deck(new Card(color, value) :: cards)</span><span style=''>
+</span>46 <span style=''>  }
+</span>47 <span style=''>
+</span>48 <span style=''>  val isStandard: Boolean = {
+</span>49 <span style=''>    </span><span style='background: #AEF1AE'>this.get_cards().distinct.length == 52</span><span style=''>
+</span>50 <span style=''>  }
+</span>51 <span style=''>
+</span>52 <span style=''>  def duplicatesOfCard(card: Card): Int = {
+</span>53 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(_.is_equal(card))</span><span style=''>
+</span>54 <span style=''>  }
+</span>55 <span style=''>
+</span>56 <span style=''>  def amountOfColor(color: String): Int = {
+</span>57 <span style=''>    </span><span style='background: #AEF1AE'>require(
+</span>58 <span style=''></span><span style='background: #AEF1AE'>      List(&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains(color),
+</span>59 <span style=''></span><span style='background: #AEF1AE'>      </span><span style='background: #F0ADAD'>&quot;wrong color&quot;</span><span style='background: #AEF1AE'>
+</span>60 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>61 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(_.get_color() == color)</span><span style=''>
+</span>62 <span style=''>  }
+</span>63 <span style=''>
+</span>64 <span style=''>  def amountOfNumerical(numerical: String): Int = {
+</span>65 <span style=''>    </span><span style='background: #AEF1AE'>require(
+</span>66 <span style=''></span><span style='background: #AEF1AE'>      List(&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains(numerical),
+</span>67 <span style=''></span><span style='background: #AEF1AE'>      </span><span style='background: #F0ADAD'>&quot;wrong numerical&quot;</span><span style='background: #AEF1AE'>
+</span>68 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>69 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(_.get_value() == numerical)</span><span style=''>
+</span>70 <span style=''>  }
+</span>71 <span style=''>
+</span>72 <span style=''>  val amountWithNumerical: Int = {
+</span>73 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(x =&gt;
+</span>74 <span style=''></span><span style='background: #AEF1AE'>      List(&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains(x.get_value())
+</span>75 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>76 <span style=''>  }
+</span>77 <span style=''>
+</span>78 <span style=''>  def amountOfFace(face: String): Int = {
+</span>79 <span style=''>    </span><span style='background: #AEF1AE'>require(List(&quot;King&quot;, &quot;Queen&quot;, &quot;Jack&quot;).contains(face), </span><span style='background: #F0ADAD'>&quot;wrong face&quot;</span><span style='background: #AEF1AE'>)</span><span style=''>
+</span>80 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(_.get_value() == face)</span><span style=''>
+</span>81 <span style=''>  }
+</span>82 <span style=''>
+</span>83 <span style=''>  val amountWithFace: Int = {
+</span>84 <span style=''>    </span><span style='background: #AEF1AE'>cards.count(x =&gt; List(&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains(x.get_value()))</span><span style=''>
+</span>85 <span style=''>  }
+</span>86 <span style=''>
+</span>87 <span style=''>}
+</span>88 <span style=''>
+</span>89 <span style=''>object Deck {
+</span>90 <span style=''>
+</span>91 <span style=''>  def apply(): Deck = {
+</span>92 <span style=''>    val colors = </span><span style='background: #AEF1AE'>List(&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;)</span><span style=''>
+</span>93 <span style=''>    val vals = </span><span style='background: #AEF1AE'>List(
+</span>94 <span style=''></span><span style='background: #AEF1AE'>      &quot;2&quot;,
+</span>95 <span style=''></span><span style='background: #AEF1AE'>      &quot;3&quot;,
+</span>96 <span style=''></span><span style='background: #AEF1AE'>      &quot;4&quot;,
+</span>97 <span style=''></span><span style='background: #AEF1AE'>      &quot;5&quot;,
+</span>98 <span style=''></span><span style='background: #AEF1AE'>      &quot;6&quot;,
+</span>99 <span style=''></span><span style='background: #AEF1AE'>      &quot;7&quot;,
+</span>100 <span style=''></span><span style='background: #AEF1AE'>      &quot;8&quot;,
+</span>101 <span style=''></span><span style='background: #AEF1AE'>      &quot;9&quot;,
+</span>102 <span style=''></span><span style='background: #AEF1AE'>      &quot;10&quot;,
+</span>103 <span style=''></span><span style='background: #AEF1AE'>      &quot;Jack&quot;,
+</span>104 <span style=''></span><span style='background: #AEF1AE'>      &quot;Queen&quot;,
+</span>105 <span style=''></span><span style='background: #AEF1AE'>      &quot;King&quot;,
+</span>106 <span style=''></span><span style='background: #AEF1AE'>      &quot;Ace&quot;
+</span>107 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>108 <span style=''>    var res = </span><span style='background: #AEF1AE'>new Deck(List())</span><span style=''>
+</span>109 <span style=''>
+</span>110 <span style=''>    </span><span style='background: #AEF1AE'>for (i &lt;- 0 to 3; j &lt;- 0 to 12) {
+</span>111 <span style=''></span><span style='background: #AEF1AE'>      res = res.push(new Card(colors(i), vals(j)))</span><span style=''>
+</span>112 <span style=''>    }
+</span>113 <span style=''>
+</span>114 <span style=''>    </span><span style='background: #AEF1AE'>new Deck(Random.shuffle(res.get_cards()))</span><span style=''>
+</span>115 <span style=''>  }
+</span>116 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          134
+          -
+          139
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          deck.Deck.cards
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          211
+          -
+          248
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;deck should have at least 1 element&quot;
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          184
+          -
+          209
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.nonEmpty
+        </td>
+        <td style="background: #AEF1AE">
+          this.get_cards().nonEmpty
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          176
+          -
+          249
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(this.get_cards().nonEmpty, &quot;deck should have at least 1 element&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          259
+          -
+          287
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          this.get_cards().length.==(1)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          307
+          -
+          313
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          298
+          -
+          314
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(scala.collection.immutable.Nil)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          298
+          -
+          314
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(scala.collection.immutable.Nil)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          345
+          -
+          355
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableOps.tail
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.tail
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          336
+          -
+          356
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(Deck.this.cards.tail)
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          336
+          -
+          356
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(Deck.this.cards.tail)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          418
+          -
+          426
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.::[cards.Card](rassoc$1)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          407
+          -
+          427
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck({
+  final &lt;synthetic&gt; &lt;artifact&gt; val rassoc$1: cards.Card = c;
+  Deck.this.cards.::[cards.Card](rassoc$1)
+})
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          492
+          -
+          834
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;King&quot;, &quot;Queen&quot;, &quot;Ace&quot;, &quot;Jack&quot;).contains[String](value).&amp;&amp;(scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](color)), &quot;card error&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          523
+          -
+          526
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;2&quot;
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          537
+          -
+          540
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;3&quot;
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          551
+          -
+          554
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;4&quot;
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          565
+          -
+          568
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;5&quot;
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          579
+          -
+          582
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;6&quot;
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          593
+          -
+          596
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;7&quot;
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          607
+          -
+          610
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;8&quot;
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          621
+          -
+          624
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;9&quot;
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          635
+          -
+          639
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;10&quot;
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          650
+          -
+          656
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;King&quot;
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          667
+          -
+          674
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Queen&quot;
+        </td>
+      </tr><tr>
+        <td>
+          39
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          685
+          -
+          690
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Ace&quot;
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          701
+          -
+          707
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Jack&quot;
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          508
+          -
+          806
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;King&quot;, &quot;Queen&quot;, &quot;Ace&quot;, &quot;Jack&quot;).contains[String](value).&amp;&amp;(scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](color))
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          745
+          -
+          806
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](color)
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          815
+          -
+          827
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;card error&quot;
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          840
+          -
+          881
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck({
+  final &lt;synthetic&gt; &lt;artifact&gt; val rassoc$2: cards.Card = new cards.Card(color, value);
+  Deck.this.cards.::[cards.Card](rassoc$2)
+})
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          872
+          -
+          880
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.::
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.::[cards.Card](rassoc$2)
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          925
+          -
+          963
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.==
+        </td>
+        <td style="background: #AEF1AE">
+          this.get_cards().distinct.length.==(52)
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          1021
+          -
+          1050
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x$1: cards.Card) =&gt; x$1.is_equal(card)))
+        </td>
+      </tr><tr>
+        <td>
+          53
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          1033
+          -
+          1049
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.is_equal
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.is_equal(card)
+        </td>
+      </tr><tr>
+        <td>
+          57
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          1108
+          -
+          1214
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](color), &quot;wrong color&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          58
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          1124
+          -
+          1185
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](color)
+        </td>
+      </tr><tr>
+        <td>
+          59
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          1194
+          -
+          1207
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;wrong color&quot;
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          1232
+          -
+          1254
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          x$2.get_color().==(color)
+        </td>
+      </tr><tr>
+        <td>
+          61
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          1220
+          -
+          1255
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x$2: cards.Card) =&gt; x$2.get_color().==(color)))
+        </td>
+      </tr><tr>
+        <td>
+          65
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          1321
+          -
+          1440
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains[String](numerical), &quot;wrong numerical&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          66
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          1337
+          -
+          1407
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains[String](numerical)
+        </td>
+      </tr><tr>
+        <td>
+          67
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          1416
+          -
+          1433
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;wrong numerical&quot;
+        </td>
+      </tr><tr>
+        <td>
+          69
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          1446
+          -
+          1485
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x$3: cards.Card) =&gt; x$3.get_value().==(numerical)))
+        </td>
+      </tr><tr>
+        <td>
+          69
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          1458
+          -
+          1484
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          x$3.get_value().==(numerical)
+        </td>
+      </tr><tr>
+        <td>
+          73
+        </td>
+        <td>
+          86
+        </td>
+        <td>
+          1534
+          -
+          1639
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x: cards.Card) =&gt; scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains[String](x.get_value())))
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          1603
+          -
+          1607
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;10&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          1573
+          -
+          1576
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;4&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          1588
+          -
+          1591
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;7&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          1598
+          -
+          1601
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;9&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          85
+        </td>
+        <td>
+          1558
+          -
+          1632
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;).contains[String](x.get_value())
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          1568
+          -
+          1571
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;3&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          1583
+          -
+          1586
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;6&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          1578
+          -
+          1581
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;5&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          1593
+          -
+          1596
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;8&quot;
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          1618
+          -
+          1631
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          x.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          74
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          1563
+          -
+          1566
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;2&quot;
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          89
+        </td>
+        <td>
+          1695
+          -
+          1762
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(scala.collection.immutable.List.apply[String](&quot;King&quot;, &quot;Queen&quot;, &quot;Jack&quot;).contains[String](face), &quot;wrong face&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          88
+        </td>
+        <td>
+          1749
+          -
+          1761
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;wrong face&quot;
+        </td>
+      </tr><tr>
+        <td>
+          79
+        </td>
+        <td>
+          87
+        </td>
+        <td>
+          1703
+          -
+          1747
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;King&quot;, &quot;Queen&quot;, &quot;Jack&quot;).contains[String](face)
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          91
+        </td>
+        <td>
+          1768
+          -
+          1802
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x$4: cards.Card) =&gt; x$4.get_value().==(face)))
+        </td>
+      </tr><tr>
+        <td>
+          80
+        </td>
+        <td>
+          90
+        </td>
+        <td>
+          1780
+          -
+          1801
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          x$4.get_value().==(face)
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          92
+        </td>
+        <td>
+          1868
+          -
+          1874
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Jack&quot;
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          95
+        </td>
+        <td>
+          1902
+          -
+          1915
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          x.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          1885
+          -
+          1891
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;King&quot;
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          97
+        </td>
+        <td>
+          1846
+          -
+          1917
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableOnceOps.count
+        </td>
+        <td style="background: #AEF1AE">
+          Deck.this.cards.count(((x: cards.Card) =&gt; scala.collection.immutable.List.apply[String](&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains[String](x.get_value())))
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          96
+        </td>
+        <td>
+          1863
+          -
+          1916
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;).contains[String](x.get_value())
+        </td>
+      </tr><tr>
+        <td>
+          84
+        </td>
+        <td>
+          93
+        </td>
+        <td>
+          1876
+          -
+          1883
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Queen&quot;
+        </td>
+      </tr><tr>
+        <td>
+          92
+        </td>
+        <td>
+          98
+        </td>
+        <td>
+          1990
+          -
+          2035
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          93
+        </td>
+        <td>
+          99
+        </td>
+        <td>
+          2052
+          -
+          2232
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.IterableFactory.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;, &quot;Ace&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          108
+        </td>
+        <td>
+          101
+        </td>
+        <td>
+          2248
+          -
+          2264
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(scala.collection.immutable.Nil)
+        </td>
+      </tr><tr>
+        <td>
+          108
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          2257
+          -
+          2263
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.Nil
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.Nil
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          110
+        </td>
+        <td>
+          2290
+          -
+          2357
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(0).to(12).foreach[Unit](((j: Int) =&gt; res = res.push(new cards.Card(colors.apply(i), vals.apply(j)))))
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          104
+        </td>
+        <td>
+          2295
+          -
+          2296
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          103
+        </td>
+        <td>
+          2287
+          -
+          2288
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          3
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          105
+        </td>
+        <td>
+          2300
+          -
+          2302
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          12
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          102
+        </td>
+        <td>
+          2282
+          -
+          2283
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          110
+        </td>
+        <td>
+          111
+        </td>
+        <td>
+          2272
+          -
+          2357
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.Range.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.intWrapper(0).to(3).foreach[Unit](((i: Int) =&gt; scala.Predef.intWrapper(0).to(12).foreach[Unit](((j: Int) =&gt; res = res.push(new cards.Card(colors.apply(i), vals.apply(j)))))))
+        </td>
+      </tr><tr>
+        <td>
+          111
+        </td>
+        <td>
+          107
+        </td>
+        <td>
+          2348
+          -
+          2355
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          vals.apply(j)
+        </td>
+      </tr><tr>
+        <td>
+          111
+        </td>
+        <td>
+          106
+        </td>
+        <td>
+          2337
+          -
+          2346
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.LinearSeqOps.apply
+        </td>
+        <td style="background: #AEF1AE">
+          colors.apply(i)
+        </td>
+      </tr><tr>
+        <td>
+          111
+        </td>
+        <td>
+          109
+        </td>
+        <td>
+          2319
+          -
+          2357
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.push
+        </td>
+        <td style="background: #AEF1AE">
+          res.push(new cards.Card(colors.apply(i), vals.apply(j)))
+        </td>
+      </tr><tr>
+        <td>
+          111
+        </td>
+        <td>
+          108
+        </td>
+        <td>
+          2328
+          -
+          2356
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new cards.Card(colors.apply(i), vals.apply(j))
+        </td>
+      </tr><tr>
+        <td>
+          114
+        </td>
+        <td>
+          113
+        </td>
+        <td>
+          2395
+          -
+          2395
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.BuildFromLowPriority2.buildFromIterableOps
+        </td>
+        <td style="background: #AEF1AE">
+          collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card]
+        </td>
+      </tr><tr>
+        <td>
+          114
+        </td>
+        <td>
+          115
+        </td>
+        <td>
+          2372
+          -
+          2413
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Deck(scala.util.Random.shuffle[cards.Card, List[cards.Card]](res.get_cards())(collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card]))
+        </td>
+      </tr><tr>
+        <td>
+          114
+        </td>
+        <td>
+          112
+        </td>
+        <td>
+          2396
+          -
+          2411
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          deck.Deck.get_cards
+        </td>
+        <td style="background: #AEF1AE">
+          res.get_cards()
+        </td>
+      </tr><tr>
+        <td>
+          114
+        </td>
+        <td>
+          114
+        </td>
+        <td>
+          2381
+          -
+          2412
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.util.Random.shuffle
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Random.shuffle[cards.Card, List[cards.Card]](res.get_cards())(collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card])
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

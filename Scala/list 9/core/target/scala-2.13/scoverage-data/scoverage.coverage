@@ -1,0 +1,1981 @@
+# Coverage data, format version: 2.0
+# Statement data:
+# - id
+# - source path
+# - package name
+# - class name
+# - class type (Class, Object or Trait)
+# - full class name
+# - method name
+# - start offset
+# - end offset
+# - line number
+# - symbol name
+# - tree name
+# - is branch
+# - invocations count
+# - is ignored
+# - description (can be multi-line)
+# '' sign
+# ------------------------------------------
+1
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+90
+93
+6
+<nosymbol>
+Literal
+false
+0
+false
+"2"
+
+2
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+102
+105
+7
+<nosymbol>
+Literal
+false
+0
+false
+"3"
+
+3
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+114
+117
+8
+<nosymbol>
+Literal
+false
+0
+false
+"4"
+
+4
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+126
+129
+9
+<nosymbol>
+Literal
+false
+0
+false
+"5"
+
+5
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+138
+141
+10
+<nosymbol>
+Literal
+false
+0
+false
+"6"
+
+6
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+150
+153
+11
+<nosymbol>
+Literal
+false
+0
+false
+"7"
+
+7
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+162
+165
+12
+<nosymbol>
+Literal
+false
+0
+false
+"8"
+
+8
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+174
+177
+13
+<nosymbol>
+Literal
+false
+0
+false
+"9"
+
+9
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+186
+190
+14
+<nosymbol>
+Literal
+false
+0
+false
+"10"
+
+10
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+199
+205
+15
+<nosymbol>
+Literal
+false
+0
+false
+"King"
+
+11
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+214
+221
+16
+<nosymbol>
+Literal
+false
+0
+false
+"Queen"
+
+12
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+230
+235
+17
+<nosymbol>
+Literal
+false
+0
+false
+"Ace"
+
+13
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+244
+250
+18
+<nosymbol>
+Literal
+false
+0
+false
+"Jack"
+
+14
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+267
+272
+19
+cards.Card.value
+Select
+false
+0
+false
+Card.this.value
+
+15
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+289
+299
+20
+<nosymbol>
+Literal
+false
+0
+false
+"Diamonds"
+
+16
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+301
+309
+20
+<nosymbol>
+Literal
+false
+0
+false
+"Spades"
+
+17
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+311
+319
+20
+<nosymbol>
+Literal
+false
+0
+false
+"Hearts"
+
+18
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+321
+328
+20
+<nosymbol>
+Literal
+false
+0
+false
+"Clubs"
+
+19
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+339
+344
+20
+cards.Card.color
+Select
+false
+0
+false
+Card.this.color
+
+20
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+284
+345
+20
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](Card.this.color)
+
+21
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+77
+345
+19
+scala.Boolean.&&
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Ace", "Jack").contains[String](Card.this.value).&&(scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](Card.this.color))
+
+22
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+352
+364
+21
+<nosymbol>
+Literal
+false
+0
+false
+"card error"
+
+23
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+<none>
+63
+369
+4
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Ace", "Jack").contains[String](Card.this.value).&&(scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](Card.this.color)), "card error")
+
+24
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+is_equal
+500
+516
+28
+cards.Card.get_color
+Apply
+false
+0
+false
+card.get_color()
+
+25
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+is_equal
+540
+556
+28
+cards.Card.get_value
+Apply
+false
+0
+false
+card.get_value()
+
+26
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+is_equal
+520
+556
+28
+java.lang.Object.==
+Apply
+false
+0
+false
+this.get_value().==(card.get_value())
+
+27
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+is_equal
+480
+556
+28
+scala.Boolean.&&
+Apply
+false
+0
+false
+this.get_color().==(card.get_color()).&&(this.get_value().==(card.get_value()))
+
+28
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+get_color
+600
+605
+32
+cards.Card.color
+Select
+false
+0
+false
+Card.this.color
+
+29
+M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala
+cards
+Card
+Class
+cards.Card
+get_value
+649
+654
+36
+cards.Card.value
+Select
+false
+0
+false
+Card.this.value
+
+30
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+get_cards
+134
+139
+9
+deck.Deck.cards
+Select
+false
+0
+false
+Deck.this.cards
+
+31
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+184
+209
+13
+scala.collection.IterableOnceOps.nonEmpty
+Select
+false
+0
+false
+this.get_cards().nonEmpty
+
+32
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+211
+248
+13
+<nosymbol>
+Literal
+false
+0
+false
+"deck should have at least 1 element"
+
+33
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+176
+249
+13
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(this.get_cards().nonEmpty, "deck should have at least 1 element")
+
+34
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+259
+287
+14
+scala.Int.==
+Apply
+false
+0
+false
+this.get_cards().length.==(1)
+
+35
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+307
+313
+15
+scala.collection.immutable.Nil
+Select
+false
+0
+false
+scala.collection.immutable.Nil
+
+36
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+298
+314
+15
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck(scala.collection.immutable.Nil)
+
+37
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+298
+314
+15
+deck.Deck.<init>
+Block
+true
+0
+false
+new Deck(scala.collection.immutable.Nil)
+
+38
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+345
+355
+17
+scala.collection.IterableOps.tail
+Select
+false
+0
+false
+Deck.this.cards.tail
+
+39
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+336
+356
+17
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck(Deck.this.cards.tail)
+
+40
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+pull
+336
+356
+17
+deck.Deck.<init>
+Block
+true
+0
+false
+new Deck(Deck.this.cards.tail)
+
+41
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+418
+426
+22
+scala.collection.immutable.List.::
+Apply
+false
+0
+false
+Deck.this.cards.::[cards.Card](rassoc$1)
+
+42
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+407
+427
+22
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck({
+  final <synthetic> <artifact> val rassoc$1: cards.Card = c;
+  Deck.this.cards.::[cards.Card](rassoc$1)
+})
+
+43
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+523
+526
+28
+<nosymbol>
+Literal
+false
+0
+false
+"2"
+
+44
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+537
+540
+29
+<nosymbol>
+Literal
+false
+0
+false
+"3"
+
+45
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+551
+554
+30
+<nosymbol>
+Literal
+false
+0
+false
+"4"
+
+46
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+565
+568
+31
+<nosymbol>
+Literal
+false
+0
+false
+"5"
+
+47
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+579
+582
+32
+<nosymbol>
+Literal
+false
+0
+false
+"6"
+
+48
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+593
+596
+33
+<nosymbol>
+Literal
+false
+0
+false
+"7"
+
+49
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+607
+610
+34
+<nosymbol>
+Literal
+false
+0
+false
+"8"
+
+50
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+621
+624
+35
+<nosymbol>
+Literal
+false
+0
+false
+"9"
+
+51
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+635
+639
+36
+<nosymbol>
+Literal
+false
+0
+false
+"10"
+
+52
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+650
+656
+37
+<nosymbol>
+Literal
+false
+0
+false
+"King"
+
+53
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+667
+674
+38
+<nosymbol>
+Literal
+false
+0
+false
+"Queen"
+
+54
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+685
+690
+39
+<nosymbol>
+Literal
+false
+0
+false
+"Ace"
+
+55
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+701
+707
+40
+<nosymbol>
+Literal
+false
+0
+false
+"Jack"
+
+56
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+745
+806
+42
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](color)
+
+57
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+508
+806
+41
+scala.Boolean.&&
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Ace", "Jack").contains[String](value).&&(scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](color))
+
+58
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+815
+827
+43
+<nosymbol>
+Literal
+false
+0
+false
+"card error"
+
+59
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+492
+834
+26
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10", "King", "Queen", "Ace", "Jack").contains[String](value).&&(scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](color)), "card error")
+
+60
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+872
+880
+45
+scala.collection.immutable.List.::
+Apply
+false
+0
+false
+Deck.this.cards.::[cards.Card](rassoc$2)
+
+61
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+push
+840
+881
+45
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck({
+  final <synthetic> <artifact> val rassoc$2: cards.Card = new cards.Card(color, value);
+  Deck.this.cards.::[cards.Card](rassoc$2)
+})
+
+62
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+925
+963
+49
+scala.Int.==
+Apply
+false
+0
+false
+this.get_cards().distinct.length.==(52)
+
+63
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+duplicatesOfCard
+1033
+1049
+53
+cards.Card.is_equal
+Apply
+false
+0
+false
+x$1.is_equal(card)
+
+64
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+duplicatesOfCard
+1021
+1050
+53
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x$1: cards.Card) => x$1.is_equal(card)))
+
+65
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfColor
+1124
+1185
+58
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](color)
+
+66
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfColor
+1194
+1207
+59
+<nosymbol>
+Literal
+false
+0
+false
+"wrong color"
+
+67
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfColor
+1108
+1214
+57
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs").contains[String](color), "wrong color")
+
+68
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfColor
+1232
+1254
+61
+java.lang.Object.==
+Apply
+false
+0
+false
+x$2.get_color().==(color)
+
+69
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfColor
+1220
+1255
+61
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x$2: cards.Card) => x$2.get_color().==(color)))
+
+70
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfNumerical
+1337
+1407
+66
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10").contains[String](numerical)
+
+71
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfNumerical
+1416
+1433
+67
+<nosymbol>
+Literal
+false
+0
+false
+"wrong numerical"
+
+72
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfNumerical
+1321
+1440
+65
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10").contains[String](numerical), "wrong numerical")
+
+73
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfNumerical
+1458
+1484
+69
+java.lang.Object.==
+Apply
+false
+0
+false
+x$3.get_value().==(numerical)
+
+74
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfNumerical
+1446
+1485
+69
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x$3: cards.Card) => x$3.get_value().==(numerical)))
+
+75
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1563
+1566
+74
+<nosymbol>
+Literal
+false
+0
+false
+"2"
+
+76
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1568
+1571
+74
+<nosymbol>
+Literal
+false
+0
+false
+"3"
+
+77
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1573
+1576
+74
+<nosymbol>
+Literal
+false
+0
+false
+"4"
+
+78
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1578
+1581
+74
+<nosymbol>
+Literal
+false
+0
+false
+"5"
+
+79
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1583
+1586
+74
+<nosymbol>
+Literal
+false
+0
+false
+"6"
+
+80
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1588
+1591
+74
+<nosymbol>
+Literal
+false
+0
+false
+"7"
+
+81
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1593
+1596
+74
+<nosymbol>
+Literal
+false
+0
+false
+"8"
+
+82
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1598
+1601
+74
+<nosymbol>
+Literal
+false
+0
+false
+"9"
+
+83
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1603
+1607
+74
+<nosymbol>
+Literal
+false
+0
+false
+"10"
+
+84
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1618
+1631
+74
+cards.Card.get_value
+Apply
+false
+0
+false
+x.get_value()
+
+85
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1558
+1632
+74
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10").contains[String](x.get_value())
+
+86
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1534
+1639
+73
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x: cards.Card) => scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10").contains[String](x.get_value())))
+
+87
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfFace
+1703
+1747
+79
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("King", "Queen", "Jack").contains[String](face)
+
+88
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfFace
+1749
+1761
+79
+<nosymbol>
+Literal
+false
+0
+false
+"wrong face"
+
+89
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfFace
+1695
+1762
+79
+scala.Predef.require
+Apply
+false
+0
+false
+scala.Predef.require(scala.collection.immutable.List.apply[String]("King", "Queen", "Jack").contains[String](face), "wrong face")
+
+90
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfFace
+1780
+1801
+80
+java.lang.Object.==
+Apply
+false
+0
+false
+x$4.get_value().==(face)
+
+91
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+amountOfFace
+1768
+1802
+80
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x$4: cards.Card) => x$4.get_value().==(face)))
+
+92
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1868
+1874
+84
+<nosymbol>
+Literal
+false
+0
+false
+"Jack"
+
+93
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1876
+1883
+84
+<nosymbol>
+Literal
+false
+0
+false
+"Queen"
+
+94
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1885
+1891
+84
+<nosymbol>
+Literal
+false
+0
+false
+"King"
+
+95
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1902
+1915
+84
+cards.Card.get_value
+Apply
+false
+0
+false
+x.get_value()
+
+96
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1863
+1916
+84
+scala.collection.immutable.List.contains
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Jack", "Queen", "King").contains[String](x.get_value())
+
+97
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Class
+deck.Deck
+<none>
+1846
+1917
+84
+scala.collection.IterableOnceOps.count
+Apply
+false
+0
+false
+Deck.this.cards.count(((x: cards.Card) => scala.collection.immutable.List.apply[String]("Jack", "Queen", "King").contains[String](x.get_value())))
+
+98
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+1990
+2035
+92
+scala.collection.IterableFactory.apply
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("Diamonds", "Spades", "Hearts", "Clubs")
+
+99
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2052
+2232
+93
+scala.collection.IterableFactory.apply
+Apply
+false
+0
+false
+scala.collection.immutable.List.apply[String]("2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace")
+
+100
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2257
+2263
+108
+scala.collection.immutable.Nil
+Select
+false
+0
+false
+scala.collection.immutable.Nil
+
+101
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2248
+2264
+108
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck(scala.collection.immutable.Nil)
+
+102
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2282
+2283
+110
+<nosymbol>
+Literal
+false
+0
+false
+0
+
+103
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2287
+2288
+110
+<nosymbol>
+Literal
+false
+0
+false
+3
+
+104
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2295
+2296
+110
+<nosymbol>
+Literal
+false
+0
+false
+0
+
+105
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2300
+2302
+110
+<nosymbol>
+Literal
+false
+0
+false
+12
+
+106
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2337
+2346
+111
+scala.collection.LinearSeqOps.apply
+Apply
+false
+0
+false
+colors.apply(i)
+
+107
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2348
+2355
+111
+scala.collection.LinearSeqOps.apply
+Apply
+false
+0
+false
+vals.apply(j)
+
+108
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2328
+2356
+111
+cards.Card.<init>
+Apply
+false
+0
+false
+new cards.Card(colors.apply(i), vals.apply(j))
+
+109
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2319
+2357
+111
+deck.Deck.push
+Apply
+false
+0
+false
+res.push(new cards.Card(colors.apply(i), vals.apply(j)))
+
+110
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2290
+2357
+110
+scala.collection.immutable.Range.foreach
+Apply
+false
+0
+false
+scala.Predef.intWrapper(0).to(12).foreach[Unit](((j: Int) => res = res.push(new cards.Card(colors.apply(i), vals.apply(j)))))
+
+111
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2272
+2357
+110
+scala.collection.immutable.Range.foreach
+Apply
+false
+0
+false
+scala.Predef.intWrapper(0).to(3).foreach[Unit](((i: Int) => scala.Predef.intWrapper(0).to(12).foreach[Unit](((j: Int) => res = res.push(new cards.Card(colors.apply(i), vals.apply(j)))))))
+
+112
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2396
+2411
+114
+deck.Deck.get_cards
+Apply
+false
+0
+false
+res.get_cards()
+
+113
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2395
+2395
+114
+scala.collection.BuildFromLowPriority2.buildFromIterableOps
+TypeApply
+false
+0
+false
+collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card]
+
+114
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2381
+2412
+114
+scala.util.Random.shuffle
+ApplyToImplicitArgs
+false
+0
+false
+scala.util.Random.shuffle[cards.Card, List[cards.Card]](res.get_cards())(collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card])
+
+115
+M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala
+deck
+Deck
+Object
+deck.Deck
+apply
+2372
+2413
+114
+deck.Deck.<init>
+Apply
+false
+0
+false
+new Deck(scala.util.Random.shuffle[cards.Card, List[cards.Card]](res.get_cards())(collection.this.BuildFrom.buildFromIterableOps[List, cards.Card, cards.Card]))
+

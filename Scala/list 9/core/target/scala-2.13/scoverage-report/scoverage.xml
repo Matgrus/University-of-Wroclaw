@@ -1,0 +1,431 @@
+<scoverage 
+statement-count="115" statements-invoked="109" statement-rate="94.78" branch-rate="100.00" version="1.0" timestamp="1579081102042">
+    <packages>
+        <package name="cards" statement-count="29" statements-invoked="28" statement-rate="96.55">
+            <classes>
+                <class 
+                name="cards.Card" filename="cards\Card.scala" statement-count="29" statements-invoked="28" statement-rate="96.55" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="cards/Card/get_color" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="get_color" start="600" end="605" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="cards/Card/&lt;none&gt;" statement-count="23" statements-invoked="22" statement-rate="95.65" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="63" end="369" line="4" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="174" end="177" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="311" end="319" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="214" end="221" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="284" end="345" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="102" end="105" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="138" end="141" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="267" end="272" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="244" end="250" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="126" end="129" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="352" end="364" line="21" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="301" end="309" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="162" end="165" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="199" end="205" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="90" end="93" line="6" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="339" end="344" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="186" end="190" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="321" end="328" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="77" end="345" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="230" end="235" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="114" end="117" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="289" end="299" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="&lt;none&gt;" start="150" end="153" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="cards/Card/get_value" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="get_value" start="649" end="654" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="cards/Card/is_equal" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="is_equal" start="520" end="556" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="is_equal" start="540" end="556" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="is_equal" start="480" end="556" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="cards" class="Card" class-type="Class" full-class-name="cards.Card" source="M:\UWR\V\Scala\list 9\core\src\main\scala\cards\Card.scala" method="is_equal" start="500" end="516" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="deck" statement-count="86" statements-invoked="81" statement-rate="94.19">
+            <classes>
+                <class 
+                name="deck.Deck" filename="deck\Deck.scala" statement-count="86" statements-invoked="81" statement-rate="94.19" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="deck/Deck/&lt;none&gt;" statement-count="19" statements-invoked="19" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1868" end="1874" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1603" end="1607" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1902" end="1915" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1573" end="1576" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1534" end="1639" line="73" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="925" end="963" line="49" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1588" end="1591" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1598" end="1601" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1558" end="1632" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1885" end="1891" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1568" end="1571" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1846" end="1917" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1583" end="1586" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1863" end="1916" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1578" end="1581" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1593" end="1596" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1618" end="1631" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1876" end="1883" line="84" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="&lt;none&gt;" start="1563" end="1566" line="74" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="deck/Deck/amountOfFace" statement-count="5" statements-invoked="4" statement-rate="80.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfFace" start="1695" end="1762" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfFace" start="1768" end="1802" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfFace" start="1749" end="1761" line="79" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfFace" start="1703" end="1747" line="79" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfFace" start="1780" end="1801" line="80" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="deck/Deck/amountOfColor" statement-count="5" statements-invoked="4" statement-rate="80.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfColor" start="1232" end="1254" line="61" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfColor" start="1124" end="1185" line="58" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfColor" start="1108" end="1214" line="57" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfColor" start="1220" end="1255" line="61" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfColor" start="1194" end="1207" line="59" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="deck/Deck/apply" statement-count="18" statements-invoked="18" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2248" end="2264" line="108" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2290" end="2357" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2295" end="2296" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2395" end="2395" line="114" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="1990" end="2035" line="92" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2348" end="2355" line="111" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2337" end="2346" line="111" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2372" end="2413" line="114" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2257" end="2263" line="108" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2319" end="2357" line="111" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2287" end="2288" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2396" end="2411" line="114" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2300" end="2302" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2381" end="2412" line="114" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2052" end="2232" line="93" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2328" end="2356" line="111" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2282" end="2283" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Object" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="apply" start="2272" end="2357" line="110" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method name="deck/Deck/pull" statement-count="10" statements-invoked="9" statement-rate="90.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="211" end="248" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="307" end="313" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="345" end="355" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="336" end="356" line="17" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="184" end="209" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="259" end="287" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="298" end="314" line="15" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="298" end="314" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="336" end="356" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="pull" start="176" end="249" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+                        </method>
+                        <method name="deck/Deck/push" statement-count="21" statements-invoked="20" statement-rate="95.24" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="621" end="624" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="492" end="834" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="418" end="426" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="667" end="674" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="537" end="540" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="745" end="806" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="579" end="582" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="565" end="568" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="701" end="707" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="815" end="827" line="43" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="607" end="610" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="523" end="526" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="650" end="656" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="840" end="881" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="872" end="880" line="45" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="551" end="554" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="685" end="690" line="39" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="593" end="596" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="508" end="806" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="407" end="427" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="push" start="635" end="639" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+                        </method>
+                        <method 
+                        name="deck/Deck/get_cards" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="get_cards" start="134" end="139" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="deck/Deck/duplicatesOfCard" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="duplicatesOfCard" start="1021" end="1050" line="53" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="duplicatesOfCard" start="1033" end="1049" line="53" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="deck/Deck/amountOfNumerical" statement-count="5" statements-invoked="4" statement-rate="80.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfNumerical" start="1416" end="1433" line="67" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfNumerical" start="1446" end="1485" line="69" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfNumerical" start="1458" end="1484" line="69" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfNumerical" start="1337" end="1407" line="66" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="deck" class="Deck" class-type="Class" full-class-name="deck.Deck" source="M:\UWR\V\Scala\list 9\core\src\main\scala\deck\Deck.scala" method="amountOfNumerical" start="1321" end="1440" line="65" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

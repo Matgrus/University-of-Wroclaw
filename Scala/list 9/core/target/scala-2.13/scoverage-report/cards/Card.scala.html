@@ -1,0 +1,688 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          cards\Card.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package cards
+</span>2 <span style=''>
+</span>3 <span style=''>class Card(color: String, value: String) {
+</span>4 <span style=''>  </span><span style='background: #AEF1AE'>require(
+</span>5 <span style=''></span><span style='background: #AEF1AE'>    List(
+</span>6 <span style=''></span><span style='background: #AEF1AE'>      &quot;2&quot;,
+</span>7 <span style=''></span><span style='background: #AEF1AE'>      &quot;3&quot;,
+</span>8 <span style=''></span><span style='background: #AEF1AE'>      &quot;4&quot;,
+</span>9 <span style=''></span><span style='background: #AEF1AE'>      &quot;5&quot;,
+</span>10 <span style=''></span><span style='background: #AEF1AE'>      &quot;6&quot;,
+</span>11 <span style=''></span><span style='background: #AEF1AE'>      &quot;7&quot;,
+</span>12 <span style=''></span><span style='background: #AEF1AE'>      &quot;8&quot;,
+</span>13 <span style=''></span><span style='background: #AEF1AE'>      &quot;9&quot;,
+</span>14 <span style=''></span><span style='background: #AEF1AE'>      &quot;10&quot;,
+</span>15 <span style=''></span><span style='background: #AEF1AE'>      &quot;King&quot;,
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      &quot;Queen&quot;,
+</span>17 <span style=''></span><span style='background: #AEF1AE'>      &quot;Ace&quot;,
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      &quot;Jack&quot;
+</span>19 <span style=''></span><span style='background: #AEF1AE'>    ).contains(value) &amp;&amp;
+</span>20 <span style=''></span><span style='background: #AEF1AE'>      List(&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains(color),
+</span>21 <span style=''></span><span style='background: #AEF1AE'>    </span><span style='background: #F0ADAD'>&quot;card error&quot;</span><span style='background: #AEF1AE'>
+</span>22 <span style=''></span><span style='background: #AEF1AE'>  )</span><span style=''>
+</span>23 <span style=''>
+</span>24 <span style=''>  override def toString: String =
+</span>25 <span style=''>    s&quot;[$color, $value]&quot;
+</span>26 <span style=''>
+</span>27 <span style=''>  def is_equal(card: Card): Boolean = {
+</span>28 <span style=''>    </span><span style='background: #AEF1AE'>this.get_color() == card.get_color() &amp;&amp; this.get_value() == card.get_value()</span><span style=''>
+</span>29 <span style=''>  }
+</span>30 <span style=''>
+</span>31 <span style=''>  def get_color(): String = {
+</span>32 <span style=''>    </span><span style='background: #AEF1AE'>color</span><span style=''>
+</span>33 <span style=''>  }
+</span>34 <span style=''>
+</span>35 <span style=''>  def get_value(): String = {
+</span>36 <span style=''>    </span><span style='background: #AEF1AE'>value</span><span style=''>
+</span>37 <span style=''>  }
+</span>38 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          4
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          63
+          -
+          369
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.require
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.require(scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;King&quot;, &quot;Queen&quot;, &quot;Ace&quot;, &quot;Jack&quot;).contains[String](Card.this.value).&amp;&amp;(scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](Card.this.color)), &quot;card error&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          6
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          90
+          -
+          93
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;2&quot;
+        </td>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          102
+          -
+          105
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;3&quot;
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          114
+          -
+          117
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;4&quot;
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          126
+          -
+          129
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;5&quot;
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          138
+          -
+          141
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;6&quot;
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          150
+          -
+          153
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;7&quot;
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          162
+          -
+          165
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;8&quot;
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          174
+          -
+          177
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;9&quot;
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          186
+          -
+          190
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;10&quot;
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          199
+          -
+          205
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;King&quot;
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          214
+          -
+          221
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Queen&quot;
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          230
+          -
+          235
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Ace&quot;
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          244
+          -
+          250
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Jack&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          267
+          -
+          272
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          cards.Card.value
+        </td>
+        <td style="background: #AEF1AE">
+          Card.this.value
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          77
+          -
+          345
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;King&quot;, &quot;Queen&quot;, &quot;Ace&quot;, &quot;Jack&quot;).contains[String](Card.this.value).&amp;&amp;(scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](Card.this.color))
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          311
+          -
+          319
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Hearts&quot;
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          284
+          -
+          345
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.immutable.List.contains
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.immutable.List.apply[String](&quot;Diamonds&quot;, &quot;Spades&quot;, &quot;Hearts&quot;, &quot;Clubs&quot;).contains[String](Card.this.color)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          301
+          -
+          309
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Spades&quot;
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          339
+          -
+          344
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          cards.Card.color
+        </td>
+        <td style="background: #AEF1AE">
+          Card.this.color
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          321
+          -
+          328
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Clubs&quot;
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          289
+          -
+          299
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Diamonds&quot;
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          352
+          -
+          364
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;card error&quot;
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          520
+          -
+          556
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td style="background: #AEF1AE">
+          this.get_value().==(card.get_value())
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          540
+          -
+          556
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_value
+        </td>
+        <td style="background: #AEF1AE">
+          card.get_value()
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          480
+          -
+          556
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          this.get_color().==(card.get_color()).&amp;&amp;(this.get_value().==(card.get_value()))
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          500
+          -
+          516
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          cards.Card.get_color
+        </td>
+        <td style="background: #AEF1AE">
+          card.get_color()
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          600
+          -
+          605
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          cards.Card.color
+        </td>
+        <td style="background: #AEF1AE">
+          Card.this.color
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          649
+          -
+          654
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          cards.Card.value
+        </td>
+        <td style="background: #AEF1AE">
+          Card.this.value
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

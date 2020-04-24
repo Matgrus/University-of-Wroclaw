@@ -1,0 +1,5 @@
+[info] blackjack_test:
+[info] - get_cards_test
+[info] - points_test
+[info] - play_test
+[info] - all21_test

@@ -1,0 +1,12 @@
+[info] deck_test:
+[info] - get_cards_test
+[info] - pull_test
+[info] - push_card_test
+[info] - push_colandval_test
+[info] - duplicatesOfCard_test
+[info] - isStandard_test
+[info] - amountOfColor_test
+[info] - amountOfNumerical_test
+[info] - amountWithNumerical_test
+[info] - amountOfFace_test
+[info] - amountWithFace_test
