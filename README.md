@@ -1,7 +1,7 @@
 # University-of-Wroclaw
 
 Winter 2017/18:
-- Mathematical analysis I
+- Calculus I
 - Computing for Computer Scientists
 - Introduction to Computer Science
 - Introduction to programming in Python
@@ -24,7 +24,7 @@ Winter 2018/19:
 Summer 2018/19:
 - Algorithms and Data Structures
 - Another View of Economy
-- Mathematical analysis II
+- Calculus II
 - Object-Oriented Programming
 - Probability and Statistics
 
